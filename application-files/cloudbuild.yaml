@@ -1,5 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
+  dir: 'application-files'
   args: ['build', '-t', 'gcr.io/project-f1433245-a1c4-4477-abb/demo-flask-app:$COMMIT_SHA', '.']
 
 - name: 'gcr.io/cloud-builders/docker'
